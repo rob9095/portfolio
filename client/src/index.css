@@ -59,6 +59,14 @@ a.btn.clear {
     background-repeat: no-repeat;
 }
 
+a.btn:hover {
+	box-shadow: 0px 0px 100px 10px rgba(255, 255, 255, 0.1);
+}
+
+a.btn.clear:hover {
+	background: linear-gradient(to bottom, rgba(60,141,254,1) 0%, rgba(72,72,254,1) 100%);
+}
+
 section {
 	display: flex;
 	flex-direction: column;
@@ -200,7 +208,7 @@ header nav li {
 .hero-content-area {
 	opacity: 0;
 	margin-top: 100px;
-	animation: 1s slidefade 1s forwards;
+	animation: .5s slidefade .5s forwards;
 }
 
 @keyframes slidefade {
