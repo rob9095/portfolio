@@ -1,29 +1,42 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
 /*General Styles*/
 
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
 	font: normal 16px sans-serif;
-	color: #555;
+  color: #555;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#root, .App {
+  height: 100%;
+}
+
+.App {
+  position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	z-index: -1;
+	background: linear-gradient(45deg, rgba(26,31,75,1) 0%, rgba(31,37,84,1) 21%, rgba(37,44,96,1) 41%, rgba(46,60,118,1) 59%, rgba(58,72,133,1) 79%, rgba(65,75,140,1) 100%);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 ul,
@@ -39,6 +52,11 @@ a {
 
 a:hover {
 	opacity: 1;
+}
+
+.main-bg {
+  background: linear-gradient(45deg, rgba(26,31,75,1) 0%, rgba(31,37,84,1) 21%, rgba(37,44,96,1) 41%, rgba(46,60,118,1) 59%, rgba(58,72,133,1) 79%, rgba(65,75,140,1) 100%);
+  height: 100%;
 }
 
 a.btn {
@@ -72,6 +90,16 @@ section {
 	flex-direction: column;
 	align-items: center;
 	padding: 100px 80px;
+}
+
+section.centered {
+  position: relative;
+  justify-content: center;
+  text-align: center;
+}
+
+section.full-height {
+  min-height: 100vh;
 }
 
 section:not(.hero):nth-child(even) {
@@ -169,19 +197,18 @@ header nav li {
 	position: relative;
 	justify-content: center;
 	text-align: center;
-	min-height: 100vh;
+	min-height: 100%;
 	color: #fff;
 }
 
-.hero .hero-gradient {
+.hero .hero-content {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 	background-size: cover;
-	z-index: -1;
-	background: linear-gradient(45deg, rgba(26,31,75,1) 0%, rgba(31,37,84,1) 21%, rgba(37,44,96,1) 41%, rgba(46,60,118,1) 59%, rgba(58,72,133,1) 79%, rgba(65,75,140,1) 100%);
+  z-index: -1;
 }
 
 .hero h1 {
@@ -208,7 +235,7 @@ header nav li {
 .hero-content-area {
 	opacity: 0;
 	margin-top: 100px;
-	animation: .5s slidefade .5s forwards;
+	animation: .5s slidefade 0s forwards;
 }
 
 @keyframes slidefade {
@@ -234,4 +261,61 @@ header nav li {
 	.hero a.btn {
 		padding: 15px 40px;
 	}
+}
+
+/* Projects/Work Styles */
+
+ul.projects {
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  display: flex;
+}
+
+ul.projects li .project-item {
+  width: 300px;
+  height: 200px;
+  background: linear-gradient(45deg, rgba(60,141,254,-.4) 0%, rgba(72,72,254,.3) 100%);
+  border-radius: 20px;
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.project-item h2 {
+  color: #fff;
+  font-family: "Quicksand", sans-serif;
+  font-size: 15px;
+}
+
+ul.projects li .thumbnail img {
+  width: 243px;
+  height: 229px;
+  border-radius: 10px;
+}
+
+.info {
+  color: #444c79;
+}
+
+.icon-gradient-purple {
+  background: -webkit-gradient(linear, left top, left bottom, from(#b14efe), to(#7166fc));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.icon-gradient-teal {
+  background: -webkit-gradient(linear, left top, left bottom, from(#49cfc5), to(#2199c6));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.icon-gradient-pink {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff6996), to(#fe8370));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }

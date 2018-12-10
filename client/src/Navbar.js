@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Navbar extends Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class Navbar extends Component {
   render() {
     return(
       <header>
-        <h2><a href="/">robt</a></h2>
+        <h2><Link to="/">robt</Link></h2>
         <nav>
           <li><a href="/about">About</a></li>
           <li><a href="/work">Work</a></li>
