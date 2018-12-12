@@ -11,9 +11,7 @@ export const projects = [
     "image_url":"https://s3-us-west-2.amazonaws.com/udacity-profiles/production/projects/11085313332-project-8dfb4f72a2c972d15cd7da202a14baab.png",
     "name":"Surfcast - Maps App",
     "nanodegree_name":"Front End Web Developer II Nanodegree",
-    "skills":[  
-
-    ],
+    "skills":['JavaScript','React','Babel','HTML5','Fetch API','CSS3','Webpack'],
     "position":1,
     "type":"UDACITY",
     "udacity_key":"11085313332"
@@ -30,9 +28,7 @@ export const projects = [
     "image_url":"https://s3-us-west-2.amazonaws.com/udacity-profiles/production/projects/11085313332-project-838391c13e1318be9326f7d83b266218.png",
     "name":"Memory Game",
     "nanodegree_name":"Front-End",
-    "skills":[  
-
-    ],
+    "skills":[ 'JavaScript', 'HTML5', 'CSS3'],
     "position":2,
     "type":"UDACITY",
     "udacity_key":"11085313332"

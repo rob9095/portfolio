@@ -46,22 +46,14 @@ class Projects extends Component {
     return(
       <section className="centered full-height" style={{overflow: !isVisible ? 'hidden' : 'auto'}}>
         <Gallery pose={isVisible ? 'enter' : 'exit'} className="projects">
-          {items.map(item =>
+          {items.slice(0,3).map(item =>
             <Item key={item.id}>
-              {/* <div className="thumbnail">
-                <img alt="project screenshot" src={item.image_url} />
-              </div>
-              <div className="info">
-                <h2>{item.name}</h2>
-                <div className="tech-used">
-                </div>
-                {item.description}
-              </div> */}
               <div className="project-item">
+                <i className={`fa fa-3x ${item.icon} icon-fill gradient-${item.iconColor}`} />
+                <div className={`underline gradient-${item.iconColor}`} />
                 <h2>{item.name}</h2>
-                <div>
-                  <i className={`fa fa-3x ${item.icon} icon-gradient-${item.iconColor}`} />
-                </div>
+                <p>{item.skills.map((s,i,a) => a.length-1 === i ? s : s + ', ')}</p>
+                <a className={`btn gradient-${item.iconColor}`}>View Project</a>
               </div>        
             </Item>
           )}
